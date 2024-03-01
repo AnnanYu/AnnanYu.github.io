@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Annan Yu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Description" lang="en" content="open source x/html and css templates">
+	<meta name="author" content="mlp design">
+	<meta name="robots" content="index, follow">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<!--start wrapper-->
+	<div id="wrapper">
+
+		<!--start body-->
+		<div id="body">
+
+			<!--start header-->
+			<div id="banner">
+				<h1>Annan Yu</h1>
+				<p>Center for Applied Mathematics, Cornell University</p>
+				<!-- menu -->
+				<label for="show-menu" class="responsive">&#9776;</label>
+				<input type="checkbox" id="show-menu" role="button">
+				<ul id="topnav">
+					<li><a href="#" id="home">Home</a></li>
+					<li><a href="#" id="research">Research</a></li>
+					<li><a href="#" id="publications">Publications</a></li>
+					<li><a href="#" id="talks">Talks</a></li>
+					<li><a href="#" id="teaching">Teaching</a></li>
+				</ul>
+				<!-- end menu -->
+			</div>
+			<!--end of header-->
+			<!--start sidebar-->
+			<div id="sidebar">
+				<h2>Upcoming Travels</h2>
+				<ul>
+					<li>May 07-11, 2024: <a href="https://iclr.cc/">The Twelfth International Conference on Learning
+							Representations (ICLR 2024)</a> @ Vienna, Austria</li>
+					<li>May 13-17, 2024: <a href="https://www.siam.org/conferences/cm/conference/la24">SIAM Conference
+							on Applied Linear Algebra (LA24)</a> @ Sorbonne University, Paris, France</li>
+					<li>August 19-23, 2024: <a href="https://mtns2024.eng.cam.ac.uk/">26th International Symposium on
+							Mathematical Theory of Networks and Systems (MTNS 2024)</a> @ University of Cambridge,
+						Cambridge, UK</li>
+				</ul>
+				<!-- <h2>News</h2> -->
+			</div>
+			<div class="clear"></div>
+			<!--end of sidebar-->
+
+			<!--start containter-->
+			<div id="container">
+
+				<!--start content-->
+				<div id="content" class="conthome">
+					<!--post item-->
+					<div class="item">
+						<img src="./Annan_Yu.jpeg" alt="Annan Yu" width="280" style="float:left;margin:20px 20px"
+							class="ay">
+						Welcome! I am a third-year Ph.D. candidate at the <a
+							href="https://www.cam.cornell.edu/cam">Center for Applied Mathematics, Cornell
+							University</a>.
+						I am advised by <a href="https://pi.math.cornell.edu/~ajt/">Prof. Alex Townsend</a>.
+						In the summer of 2023, I interned in the <a href="https://vis.lbl.gov/">Machine Learning and
+							Analytics Group</a> at the <a href="https://www.lbl.gov/">Lawrence Berkeley National
+							Laboratory (LBNL)</a>,
+						under the guidance of <a href="https://www.stat.berkeley.edu/~mmahoney/">Prof. Michael
+							Mahoney</a>, <a href="https://www.mrzv.org/">Dr. Dmitriy Morozov</a>, and <a
+							href="https://www.benerichson.com/">Dr. Benjamin Erichson</a>.
+						I will return to LBNL as a summer intern in 2024.
+						Prior to joining Cornell, I earned my B.S. degree in Computer Science and Mathematics from <a
+							href="https://www.vanderbilt.edu/">Vanderbilt University</a>,
+						where I was mentored by <a href="https://math.vanderbilt.edu/schumake/">Prof. Larry
+							Schumaker</a> and <a href="https://www.jaredspeck.com/">Prof. Jared Speck</a>.
+					</div>
+
+					<div class="item">
+						Here is my <a href="./CV_Annan.pdf">CV</a>. Feel free to reach out to me at <tt>ay262 [at]
+							cornell [dot] edu</tt>.
+					</div>
+
+					<hr>
+
+					<!--end of another post item-->
+					<div class="item">
+						<h3>Research Interests</h3>
+						<ul>
+							<li>Deep Learning: Sequence Models, Theory of Neural Networks</li>
+							<li>Numerical Analysis: Rank-revealing Factorizations, Reduced-order Modeling, Quadrature
+								rules</li>
+						</ul>
+					</div>
+				</div>
+				<!--end of content-->
+
+				<div id="content" class="contresearch" style="display: none">
+					<div class="item">
+						On this page, I briefly introduce some broad ideas of my research at Cornell and LBNL.
+						There are also some research projects that I did as an undergraduate student and no longer work
+						on.
+						Please see the <a href="#" id="publink">publications</a> page for more information.
+					</div>
+					<hr>
+					<div id="researchButtons" style="display: flex; align-items: center;">
+						<button id="btnLtiSystems" class="researchBtn">LTI Systems & Sequence Modeling</button>
+						<button id="btnNeuralNetwork" class="researchBtn">Theory of Neural Networks</button>
+						<button id="btnNonuniformSamplers" class="researchBtn">Nonuniform Samplers</button>
+					</div>
+
+					<div id="ltiSystems" class="researchSection">
+						<h2>Linear time-invariant systems and their applications in sequence modeling</h2>
+						<div class="item">
+							<strong>Main Collaborators:</strong> N. Benjamin Erichson, Michael W. Mahoney, Dmitriy
+							Morozov, Arnur Nigmetov, Alex Townsend
+						</div>
+						<div class="item">
+							<p>
+								<strong>Description:</strong> Linear time-invariant (LTI) dynamical systems are crucial
+								for understanding complex physical phenomena.
+								They are extensively studied across fields such as electrical engineering, control
+								theory, and numerical analysis.
+								Often, LTI systems derived from complex applications are unnecessarily large.
+								To utilize LTI systems more efficiently, we can reduce their size without significantly
+								altering their behavior.
+								This process is known as reduced-order modeling (ROM).
+								Together with Prof. Alex Townsend, we have designed and analyzed both algebraic and
+								data-driven ROM algorithms for LTI systems.
+							</p>
+
+							<p>
+								Meanwhile, recent advances in machine learning have highlighted the impressive
+								capability of LTI systems to capture long-range dependencies in sequential data.
+								This has led to the development of state-space models (SSMs) that outperform traditional
+								recurrent neural networks (RNNs) and transformers on long-range sequential problems,
+								finding applications in fields such as natural language processing and climate
+								forecasting.
+								Together with Dr. Arnur Nigmetov, Dr. Dmitriy Morozov, Prof. Michael Mahoney, and Dr.
+								Benjamin Erichson,
+								we have analyzed LTI systems within an SSM in the frequency domain and designed a robust
+								initialization scheme by "approximately diagonalizing" the state matrix.
+							</p>
+						</div>
+
+						<div class="item">
+							<strong>Relevant Publications:</strong>
+							<ul>
+								<li style="margin: 10px 0;">
+									<b>Annan Yu</b>, Arnur Nigmetov, Dmitriy Morozov, Michael W. Mahoney, N. Benjamin
+									Erichson,
+									<i>Robustifying state-space models for long sequences via approximate
+										diagonalization</i>,
+									International Conference on Learning Representations (spotlight), 2024. (<a
+										href="https://openreview.net/forum?id=DjeQ39QoLQ&">link</a>)
+								</li>
+								<li style="margin: 10px 0;">
+									<b>Annan Yu</b>, Alex Townsend,
+									<i>Leveraging the Hankel norm approximation and data-driven algorithms in reduced
+										order modeling</i>,
+									arXiv:2304.03813. (Accepted by Numerical Linear Algebra with Applications.) (<a
+										href="https://arxiv.org/abs/2304.03813">link</a>)
+								</li>
+							</ul>
+						</div>
+
+						<div>
+							<img src="./ROM.png" alt="ROM" class="centeredImage">
+							<center>
+								<figcaption class="figcaps">Reduced-order modeling algorithms can be used to shrink the dimension of the
+									latent state-space of an LTI system.</figcaption>
+							</center>
+						</div>
+						<div>
+							<img src="./Transfer.png" alt="Transfer" class="centeredImage">
+							<center>
+								<figcaption class="figcaps">The spikes in the transfer functions of LTI systems reveal that the previously proposed
+									state-space models are not robust.</figcaption>
+							</center>
+						</div>
+					</div>
+
+					<div id="neuralNetwork" class="researchSection" style="display: none;">
+						<h2>Theory of neural networks</h2>
+						<div class="item">
+							<strong>Main Collaborators:</strong> Chloe Becquey, N. Benjamin Erichson, Diana Halikias,
+							Michael W. Mahoney, Matthew Esmaili Mallory, Dmitriy Morozov, Arnur Nigmetov,
+							Alex Townsend, Yunan Yang
+						</div>
+						<div class="item">
+							<strong>Description:</strong> Neural networks are powerful and empirically successful
+							machine learning models.
+							However, the complexity of their structures and training processes has left us with limited
+							theoretical understanding, despite their practical success.
+							This has sparked a strong interest in developing a deeper theoretical foundation for deep
+							learning.
+							My research has focused on the following areas:
+							<ul id="researchlist">
+								<li>
+									Expressiveness: The Universal Approximation Theorems (UATs) assert that neural
+									networks can approximate any smooth ground truth to an arbitrary degree of accuracy by
+									increasing the network's width or depth.
+									While not directly addressing neural network training, these theorems validate that the
+									models are reasonable.
+									We proved a version of UAT, showing that continuous operators can be
+									approximated by deep and narrow networks,
+									in collaboration with Chloe Becquey, Diana Halikias, Matthew Esmaili Mallory, and
+									Prof. Alex Townsend.
+								</li>
+								<li>
+									Initialization: Proper initialization is critical for training neural networks with
+									gradient-based optimization algorithms, especially in state-space models for long
+									sequences.
+									Previous initialization schemes, based on projecting input sequences onto the
+									Legendre basis, have shown instability.
+									In recent work with Dr. Arnur Nigmetov, Dr. Dmitriy Morozov, Prof. Michael Mahoney, and
+									Dr. Benjamin Erichson, we proved the instability of a popular initialization scheme and proposed a
+									stable alternative based on pseudospectral theory.
+								</li>
+								<li>
+									Training: Analyzing neural network training is challenging due to complex structures
+									and optimization algorithms.
+									Neural Tangent Kernels (NTKs) offer a partial solution by assuming "infinite width"
+									networks.
+									Together with Prof. Yunan Yang and Prof. Alex Townsend, we investigated the training
+									of a simple two-layer neural network, uncovering the frequency bias phenomenon—where
+									low-frequency content is learned before high-frequency content.
+									We proposed a new class of loss functions that can enhance, diminish, counteract, or
+									even reverse this bias.
+								</li>
+							</ul>
+						</div>
+						<div class="item">
+							<strong>Relevant Publications:</strong>
+							<ul>
+								<li style="margin: 10px 0;">
+									<b>Annan Yu</b>, Arnur Nigmetov, Dmitriy Morozov, Michael W. Mahoney, N. Benjamin
+									Erichson,
+									<i>Robustifying state-space models for long sequences via approximate
+										diagonalization</i>,
+									International Conference on Learning Representations (spotlight), 2024. (<a
+										href="https://openreview.net/forum?id=DjeQ39QoLQ&">link</a>)
+								</li>
+								<li style="margin: 10px 0;">
+									<b>Annan Yu</b>, Yunan Yang, Alex Townsend,
+									<i>Tuning frequency bias in neural network training with nonuniform data</i>,
+									International Conference on Learning Representations (poster), 2023. (<a
+										href="https://openreview.net/forum?id=oLIZ2jGTiv">link</a>)
+								</li>
+								<li style="margin: 10px 0;">
+									<b>Annan Yu</b>, Chloe Becquey, Diana Halikias, Matthew E. Mallory, Alex Townsend,
+									<i>Arbitrary-depth universal approximation theorems for operator neural
+										networks</i>,
+									arXiv:2109.11354. (<a href="https://arxiv.org/abs/2109.11354">link</a>)
+								</li>
+							</ul>
+						</div>
+						<div>
+							<img src="./freqbias.png" alt="freqbias" class="centeredImage">
+							<center>
+								<figcaption class="figcaps">Frequency bias says that the low-frequency content in the target function is
+									learned prior to the high-frequency one.</figcaption>
+							</center>
+						</div>
+						<div>
+							<img src="./reversebias.png" alt="reversebias" class="centeredImage">
+							<center>
+								<figcaption class="figcaps">With a Sobolev-based loss function, we can tune <i>s</i> to change the
+									frequency bias.</figcaption>
+							</center>
+						</div>
+					</div>
+
+					<div id="nonuniformSamplers" class="researchSection" style="display: none;">
+						<h2>Nonuniform samplers and their stability</h2>
+						<div class="item">
+							<strong>Main Collaborators:</strong> Alex Townsend, Yunan Yang
+						</div>
+						<div class="item">
+							<strong>Description:</strong> In computing with periodic functions on the unit hypersphere,
+							uniformly spaced samples are preferred.
+							For instance, the discrete Fourier transform and its inverse are perfectly conditioned at
+							evenly spaced grid points.
+							However, challenges arise with nonuniform samples.
+							In collaboration with Prof. Alex Townsend, we analyzed the stability and accuracy of
+							interpolation and quadrature rules when samples deviate from evenly spaced points on the
+							unit circle.
+							With Prof. Yunan Yang and Prof. Alex Townsend, we extended the theoretical understanding of frequency
+							bias in neural network training to nonuniform datasets,
+							demonstrating that low-frequency content is typically learned before high-frequency content.
+							Our findings build on previous work on uniform training datasets by applying a quadrature
+							rule at the nonuniform locations of the training data,
+							offering new insights into training with nonuniform datasets.
+						</div>
+						<div class="item">
+							<strong>Relevant Publications:</strong>
+							<ul>
+								<li style="margin: 10px 0;">
+									<b>Annan Yu</b>, Alex Townsend,
+									<i>On the stability of unevenly spaced samples for interpolation and quadrature</i>,
+									BIT Numerical Mathematics, vol 63(23), 2023. (<a
+										href="https://link.springer.com/article/10.1007/s10543-023-00965-z">link</a>)
+								</li>
+								<li style="margin: 10px 0;">
+									<b>Annan Yu</b>, Yunan Yang, Alex Townsend,
+									<i>Tuning frequency bias in neural network training with nonuniform data</i>,
+									International Conference on Learning Representations (poster), 2023. (<a
+										href="https://openreview.net/forum?id=oLIZ2jGTiv">link</a>)
+								</li>
+							</ul>
+						</div>
+						<div>
+							<img src="./perturbpts.png" alt="perturbpts" class="centeredImage">
+							<center>
+								<figcaption class="figcaps">When the samplers are perturbed from the evenly spaced points, the
+									interpolation and quadrature start to lose stability and accuracy.</figcaption>
+							</center>
+						</div>
+						<div>
+							<img src="./freqnonuniform.png" alt="freqnonuniform" class="centeredImage">
+							<center>
+								<figcaption class="figcaps">When we have a nonuniform training dataset, frequency bias is more easily
+									observed when a quadrature-based loss function (solid lines) is in use than the
+									standard mean-squared loss (dashed lines).</figcaption>
+							</center>
+						</div>
+					</div>
+				</div>
+
+				<div id="content" class="contpublications" style="display: none">
+					<div class="item">
+						On this page, you can find all my publications and preprints.
+					</div>
+					<hr>
+					<ul>
+						<li style="margin: 10px 0;">
+							<b>Annan Yu</b>, Arnur Nigmetov, Dmitriy Morozov, Michael W. Mahoney, N. Benjamin Erichson,
+							<i>Robustifying state-space models for long sequences via approximate diagonalization</i>,
+							International Conference on Learning Representations (spotlight), 2024. (<a
+								href="https://openreview.net/forum?id=DjeQ39QoLQ&">link</a>)
+						</li>
+						<li style="margin: 10px 0;">
+							<b>Annan Yu</b>, Alex Townsend,
+							<i>On the stability of unevenly spaced samples for interpolation and quadrature</i>,
+							BIT Numerical Mathematics, vol 63(23), 2023. (<a
+								href="https://link.springer.com/article/10.1007/s10543-023-00965-z">link</a>)
+						</li>
+						<li style="margin: 10px 0;">
+							<b>Annan Yu</b>, Yunan Yang, Alex Townsend,
+							<i>Tuning frequency bias in neural network training with nonuniform data</i>,
+							International Conference on Learning Representations (poster), 2023. (<a
+								href="https://openreview.net/forum?id=oLIZ2jGTiv">link</a>)
+						</li>
+						<li style="margin: 10px 0;">
+							Larry Schumaker, <b>Annan Yu</b>,
+							<i>Approximation by polynomial splines on curved triangulations</i>,
+							Computer Aided Geometric Design, vol 92, 2022. (<a
+								href="https://www.sciencedirect.com/science/article/pii/S0167839621000959">link</a>)
+						</li>
+						<li style="margin: 10px 0;">
+							Nancy Mae Eagles, Angèle M. Foley, Alice Huang, Elene Karangozishvili, <b>Annan Yu</b>,
+							<i>On <i>H</i>-chromatic symmetric functions</i>,
+							The Electronic Journal of Combinatorics, vol 29(1), 2022. (<a
+								href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v29i1p28">link</a>)
+						</li>
+						<li style="margin: 10px 0;">
+							<b>Annan Yu</b>, Alex Townsend,
+							<i>Leveraging the Hankel norm approximation and data-driven algorithms in reduced order
+								modeling</i>,
+							arXiv:2304.03813. (Accepted by Numerical Linear Algebra with Applications.) (<a
+								href="https://arxiv.org/abs/2304.03813">link</a>)
+						</li>
+						<li style="margin: 10px 0;">
+							<b>Annan Yu</b>, Chloe Becquey, Diana Halikias, Matthew E. Mallory, Alex Townsend,
+							<i>Arbitrary-depth universal approximation theorems for operator neural networks</i>,
+							arXiv:2109.11354. (<a href="https://arxiv.org/abs/2109.11354">link</a>)
+						</li>
+					</ul>
+				</div>
+
+				<div id="content" class="conttalks" style="display: none">
+					<div class="item">
+						On this page, you can find the talks I have given and I plan to give in the future.
+					</div>
+					<hr>
+					<h3>Future talks:</h3>
+					<ul>
+						<li style="margin: 10px 0;">
+							<i>Robustifying state-space models for long sequences via approximate diagonalization</i>,
+							International Conference on Learning Representations, Austria, 2024.
+						</li>
+						<li style="margin: 10px 0;">
+							<i>Rectifying unstable rational representations in sequence models</i>,
+							SIAM Conference on Applied Linear Algebra, Sorbonne University, France, 2024.
+						</li>
+						<li style="margin: 10px 0;">
+							<i>Representations and evolution of linear time-invariant systems in state-space models</i>,
+							26th International Symposium on Mathematical Theory of Networks and Systems, University of
+							Cambridge, UK, 2024.
+						</li>
+					</ul>
+					<h3>Previous talks:</h3>
+					<ul>
+						<li style="margin: 10px 0;">
+							<i>Robustifying state-space models via approximate diagonalization</i>,
+							SciDAC AI monthly synchronization, Lawrence Berkeley National Laboratory, USA, 2024.
+							(online)
+						</li>
+						<li style="margin: 10px 0;">
+							<i>Linear time-invariant systems in machine learning</i> (50-minute tutorial),
+							SIAM New York-New Jersey-Pennsylvania (NNP) Section Annual Meeting, New Jersey Institute of
+							Technology, USA, 2023.
+						</li>
+						<li style="margin: 10px 0;">
+							<i>Leveraging the Hankel norm approximation and data-driven algorithms in reduced order
+								modeling</i>,
+							Numerical Analysis in the 21st Century, University of Oxford, UK, 2023.
+						</li>
+						<li style="margin: 10px 0;">
+							<i>Leveraging the Hankel norm approximation and block-AAA algorithms in reduced order
+								modeling</i>,
+							SIAM Southeastern Atlantic (SEAS) Section Annual Meeting, Virginia Tech, USA, 2023.
+						</li>
+						<li style="margin: 10px 0;">
+							<i>Tuning frequency bias in neural network training</i>,
+							International Conference on Learning Representations, Kigali, Rwanda, 2023. (online)
+						</li>
+						<li style="margin: 10px 0;">
+							<i>Tuning frequency bias in neural network training</i>,
+							Workshop on Numerics and Acoustics, Imperial College London, UK, 2022.
+						</li>
+						<li style="margin: 10px 0;">
+							<i>H-chromatic symmetric functions</i>,
+							2020 FUSRP Mini-Conference, Fields Institute for Research in Mathematical Sciences, Canada,
+							2020. (online)
+						</li>
+					</ul>
+				</div>
+
+				<div id="content" class="contteaching" style="display: none">
+					<div class="item">
+						On this page, you can find my teaching and grading experience at Cornell University and
+						Vanderbilt University.
+					</div>
+					<hr>
+					<h3>At Cornell University:</h3>
+					<ul>
+						<li style="margin: 3px 0;">Fall 2023: MATH 6110, Real Analysis (recitation TA, 1 section)</li>
+						<li style="margin: 3px 0;">Fall 2022: MATH 2310, Linear Algebra with Applications (recitation
+							TA, 2 sections)</li>
+					</ul>
+					<h3>At Vanderbilt University:</h3>
+					<ul>
+						<li style="margin: 3px 0;">Fall 2020: MATH 3620, Introduction to Numerical Mathematics (TA, 1
+							section)</li>
+						<li style="margin: 3px 0;">Spring 2020: MATH 3100, Introduction to Analysis (grader, 1 section)
+						</li>
+						<li style="margin: 3px 0;">Spring 2020: MATH 3620, Introduction to Numerical Mathematics (TA, 1
+							section)</li>
+						<li style="margin: 3px 0;">Fall 2019: MATH 3200, Introduction to Topology (grader, 1 section)
+						</li>
+						<li style="margin: 3px 0;">Fall 2019: CS 3251, Intermediate Software Design (TA, 3 sections)
+						</li>
+						<li style="margin: 3px 0;">Fall 2018: CS 1101, Programming and Problem Solving (TA, 3 sections)
+						</li>
+						<li style="margin: 3px 0;">Spring 2018: MATH 2300, Multivariable Calculus (grader, 1 section)
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<!--end of container-->
+
+		</div>
+		<!--end of body-->
+
+		<!--start footer-->
+		<div id="footer">
+			<span class="left">2024 &copy; <a href="#">by Annan Yu</a>.</span>
+			<span class="right"><a href="mailto: ay262@cornell.edu">Contact</a>
+		</div>
+		<!--end of footer-->
+
+	</div>
+	<!--end of wrapper-->
+
+	<!--start credits-->
+	<!--//Under CC-NC 3.0, this portion must be left intact and must not be hidden.//-->
+	<div id="credits">
+		<span><a href="http://www.mlpdesign.net" title="CSS &amp; HTML by MLP Design.net">CSS &amp; HTML</a> adapted
+			from templates by MLP Design<br />Licensed under <a rel="license"
+				href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial
+				3.0</a>.</span>
+	</div>
+	<!--end of credits-->
+
+</body>
+
+</html>
+
+<script>
+	document.getElementById("home").addEventListener("click", function () {
+		document.getElementsByClassName("conthome")[0].style.display = "";
+		document.getElementsByClassName("contresearch")[0].style.display = "none";
+		document.getElementsByClassName("contpublications")[0].style.display = "none";
+		document.getElementsByClassName("conttalks")[0].style.display = "none";
+		document.getElementsByClassName("contteaching")[0].style.display = "none";
+	});
+
+	document.getElementById("research").addEventListener("click", function () {
+		document.getElementsByClassName("conthome")[0].style.display = "none";
+		document.getElementsByClassName("contresearch")[0].style.display = "";
+		document.getElementsByClassName("contpublications")[0].style.display = "none";
+		document.getElementsByClassName("conttalks")[0].style.display = "none";
+		document.getElementsByClassName("contteaching")[0].style.display = "none";
+	});
+
+	document.getElementById("publications").addEventListener("click", function () {
+		document.getElementsByClassName("conthome")[0].style.display = "none";
+		document.getElementsByClassName("contresearch")[0].style.display = "none";
+		document.getElementsByClassName("contpublications")[0].style.display = "";
+		document.getElementsByClassName("conttalks")[0].style.display = "none";
+		document.getElementsByClassName("contteaching")[0].style.display = "none";
+	});
+	document.getElementById("publink").addEventListener("click", function () {
+		document.getElementsByClassName("conthome")[0].style.display = "none";
+		document.getElementsByClassName("contresearch")[0].style.display = "none";
+		document.getElementsByClassName("contpublications")[0].style.display = "";
+		document.getElementsByClassName("conttalks")[0].style.display = "none";
+		document.getElementsByClassName("contteaching")[0].style.display = "none";
+	});
+
+	document.getElementById("talks").addEventListener("click", function () {
+		document.getElementsByClassName("conthome")[0].style.display = "none";
+		document.getElementsByClassName("contresearch")[0].style.display = "none";
+		document.getElementsByClassName("contpublications")[0].style.display = "none";
+		document.getElementsByClassName("conttalks")[0].style.display = "";
+		document.getElementsByClassName("contteaching")[0].style.display = "none";
+	});
+
+	document.getElementById("teaching").addEventListener("click", function () {
+		document.getElementsByClassName("conthome")[0].style.display = "none";
+		document.getElementsByClassName("contresearch")[0].style.display = "none";
+		document.getElementsByClassName("contpublications")[0].style.display = "none";
+		document.getElementsByClassName("conttalks")[0].style.display = "none";
+		document.getElementsByClassName("contteaching")[0].style.display = "";
+	});
+
+	function setActiveTab(activeId) {
+		const tabs = ['home', 'research', 'publications', 'talks', 'teaching']; // List of all tabs
+		tabs.forEach(tabId => {
+			const tab = document.getElementById(tabId);
+			if (tabId === activeId) {
+				tab.classList.add("active");
+			} else {
+				tab.classList.remove("active");
+			}
+		});
+	}
+
+	document.getElementById("home").addEventListener("click", function () {
+		setActiveTab("home");
+		// The rest of your code to show/hide content
+	});
+
+	document.getElementById("research").addEventListener("click", function () {
+		setActiveTab("research");
+		// The rest of your code to show/hide content
+	});
+
+	document.getElementById("publications").addEventListener("click", function () {
+		setActiveTab("publications");
+		// The rest of your code to show/hide content
+	});
+
+	document.getElementById("talks").addEventListener("click", function () {
+		setActiveTab("talks");
+		// The rest of your code to show/hide content
+	});
+
+	document.getElementById("teaching").addEventListener("click", function () {
+		setActiveTab("teaching");
+		// The rest of your code to show/hide content
+	});
+
+	document.addEventListener("DOMContentLoaded", function () {
+		setActiveTab("home");
+		// Ensure "Home" content is visible and others are hidden if not already set up
+		document.getElementsByClassName("conthome")[0].style.display = "";
+		document.getElementsByClassName("contresearch")[0].style.display = "none";
+		document.getElementsByClassName("contpublications")[0].style.display = "none";
+		document.getElementsByClassName("conttalks")[0].style.display = "none";
+		document.getElementsByClassName("contteaching")[0].style.display = "none";
+	});
+
+	// Updated function to show research section and mark the clicked button as active
+	function showResearchSection(sectionId, btnId) {
+		const sections = ['ltiSystems', 'neuralNetwork', 'nonuniformSamplers'];
+		const buttons = ['btnLtiSystems', 'btnNeuralNetwork', 'btnNonuniformSamplers'];
+
+		// Handling sections display
+		sections.forEach(id => {
+			document.getElementById(id).style.display = (id === sectionId) ? "" : "none";
+		});
+
+		// Handling buttons active state
+		buttons.forEach(id => {
+			const btn = document.getElementById(id);
+			if (id === btnId) {
+				btn.classList.add("active");
+			} else {
+				btn.classList.remove("active");
+			}
+		});
+	}
+
+	// Update event listeners to pass both section and button IDs
+	document.getElementById("btnLtiSystems").addEventListener("click", function () {
+		showResearchSection("ltiSystems", "btnLtiSystems");
+	});
+	document.getElementById("btnNeuralNetwork").addEventListener("click", function () {
+		showResearchSection("neuralNetwork", "btnNeuralNetwork");
+	});
+	document.getElementById("btnNonuniformSamplers").addEventListener("click", function () {
+		showResearchSection("nonuniformSamplers", "btnNonuniformSamplers");
+	});
+
+	// Initial call to set the default active section and button
+	document.addEventListener("DOMContentLoaded", function () {
+		showResearchSection("ltiSystems", "btnLtiSystems");
+	});
+
+	document.getElementById("publink").addEventListener("click", function () {
+		setActiveTab("publications");
+		// Make sure the publications content is displayed, and others are hidden
+		document.getElementsByClassName("conthome")[0].style.display = "none";
+		document.getElementsByClassName("contresearch")[0].style.display = "none";
+		document.getElementsByClassName("contpublications")[0].style.display = "";
+		document.getElementsByClassName("conttalks")[0].style.display = "none";
+		document.getElementsByClassName("contteaching")[0].style.display = "none";
+	});
+
+	document.querySelectorAll('#topnav a').forEach(item => {
+  	item.addEventListener('click', () => {
+    	const checkbox = document.getElementById('show-menu');
+    	if (checkbox.checked) {
+      	checkbox.checked = false;
+    	}
+  	});
+	});
+
+</script>
