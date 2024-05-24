@@ -40,13 +40,11 @@
 			<div id="sidebar">
 				<h2>Upcoming Travels</h2>
 				<ul>
-					<li>May 07-11, 2024: <a href="https://iclr.cc/">The Twelfth International Conference on Learning
-							Representations (ICLR 2024)</a> @ Vienna, Austria</li>
-					<li>May 13-17, 2024: <a href="https://www.siam.org/conferences/cm/conference/la24">SIAM Conference
-							on Applied Linear Algebra (LA24)</a> @ Sorbonne University, Paris, France</li>
 					<li>August 19-23, 2024: <a href="https://mtns2024.eng.cam.ac.uk/">26th International Symposium on
 							Mathematical Theory of Networks and Systems (MTNS 2024)</a> @ University of Cambridge,
 						Cambridge, UK</li>
+					<li>October 21-25, 2024: <a href="https://www.siam.org/conferences/cm/conference/mds24/">SIAM Conference on Mathematics of Data Science (MDS24)</a> @
+						Atlanta, USA</li>
 				</ul>
 				<!-- <h2>News</h2> -->
 			</div>
@@ -92,7 +90,7 @@
 						<ul>
 							<li>Deep Learning: Sequence Models, Theory of Neural Networks</li>
 							<li>Numerical Analysis: Rank-revealing Factorizations, Reduced-order Modeling, Quadrature
-								rules</li>
+								Rules</li>
 						</ul>
 					</div>
 				</div>
@@ -108,6 +106,7 @@
 					<hr>
 					<div id="researchButtons" style="display: flex; align-items: center;">
 						<button id="btnLtiSystems" class="researchBtn">LTI Systems & Sequence Modeling</button>
+						<button id="btnLowRank" class="researchBtn">Low-rank Structures</button>
 						<button id="btnNeuralNetwork" class="researchBtn">Theory of Neural Networks</button>
 						<button id="btnNonuniformSamplers" class="researchBtn">Nonuniform Samplers</button>
 					</div>
@@ -143,12 +142,19 @@
 								Benjamin Erichson,
 								we have analyzed LTI systems within an SSM in the frequency domain and designed a robust
 								initialization scheme by "approximately diagonalizing" the state matrix.
+								We further proposed a parameterization scheme of the LTI systems, called HOPE, that
+								makes an SSM robust in initialization and training and have long-term memory.
 							</p>
 						</div>
 
 						<div class="item">
 							<strong>Relevant Publications:</strong>
 							<ul>
+								<li style="margin: 10px 0;">
+									<b>Annan Yu</b>, Michael W. Mahoney, N. Benjamin Erichson,
+									<i>There is HOPE to avoid HiPPOs for long-memory state space models</i>,
+									arXiv:2405.13975. (<a href="https://arxiv.org/abs/2405.13975">link</a>)
+								</li>
 								<li style="margin: 10px 0;">
 									<b>Annan Yu</b>, Arnur Nigmetov, Dmitriy Morozov, Michael W. Mahoney, N. Benjamin
 									Erichson,
@@ -159,10 +165,10 @@
 								</li>
 								<li style="margin: 10px 0;">
 									<b>Annan Yu</b>, Alex Townsend,
-									<i>Leveraging the Hankel norm approximation and data-driven algorithms in reduced
-										order modeling</i>,
-									arXiv:2304.03813. (Accepted by Numerical Linear Algebra with Applications.) (<a
-										href="https://arxiv.org/abs/2304.03813">link</a>)
+									<i>Leveraging the Hankel norm approximation and data-driven algorithms in reduced order
+										modeling</i>,
+										Numerical Linear Algebra with Applications 2024; e2555. (<a
+										href="https://onlinelibrary.wiley.com/doi/10.1002/nla.2555">link</a>)
 								</li>
 							</ul>
 						</div>
@@ -179,6 +185,75 @@
 							<center>
 								<figcaption class="figcaps">The spikes in the transfer functions of LTI systems reveal that the previously proposed
 									state-space models are not robust.</figcaption>
+							</center>
+						</div>
+					</div>
+
+					<div id="lowRank" class="researchSection">
+						<h2>Low-rank structures and approximations</h2>
+						<div class="item">
+							<strong>Main Collaborators:</strong> Anil Damle, N. Benjamin Erichson, Silke Glas, Michael W. Mahoney, Alex Townsend
+						</div>
+						<div class="item">
+							<p>
+								<strong>Description:</strong> Low-rank structures naturally arise in many real-world applications.
+								The singular values of a matrix provide a good measurement its numerical rank.
+								While the singular value decomposition gives us a natural way to reveal the rank of a matrix,
+								we sometimes need interpolative methods (e.g., LU and QR factorizations) for better efficiency
+								and interpretability. With Prof. Anil Damle, Prof. Silke Glas, and Prof. Alex Townsend, we have
+								connected a rank-revealing interpolative method to a concept called "local maximum volume."
+							</p>
+
+							<p>
+								The singular values of a matrix can be generalized to a bounded linear operator. In particular, the Hankel singular
+								values measure the numerical rank of an LTI system. Using the information of the Hankel singular values,
+								we could reduce the size of an LTI system when its singular values decay fast. The Hankel singular values
+								are also useful in understanding machine learning models, such as state-space models (SSMs). With Prof. Michael Mahoney
+								and Dr. Benjamin Erichson, we provided a theory for the success or failure of SSMs through the lens of Hankel singular values.
+								Based on that, we proposed a better parameterization scheme of the LTI systems in an SSM using their Hankel operators.
+							</p>
+						</div>
+
+						<div class="item">
+							<strong>Relevant Publications:</strong>
+							<ul>
+								<li style="margin: 10px 0;">
+									<b>Annan Yu</b>, Michael W. Mahoney, N. Benjamin Erichson,
+									<i>There is HOPE to avoid HiPPOs for long-memory state space models</i>,
+									arXiv:2405.13975. (<a href="https://arxiv.org/abs/2405.13975">link</a>)
+								</li>
+
+								<li style="margin: 10px 0;">
+									Anil Damle, Silke Glas, Alex Townsend, <b>Annan Yu</b>,
+									<i>How to reveal the rank of a matrix?</i>,
+									arXiv:2405.04330. (<a href="https://arxiv.org/abs/2405.04330">link</a>)
+								</li>
+
+								<li style="margin: 10px 0;">
+									<b>Annan Yu</b>, Alex Townsend,
+									<i>Leveraging the Hankel norm approximation and data-driven algorithms in reduced order
+										modeling</i>,
+										Numerical Linear Algebra with Applications 2024; e2555. (<a
+										href="https://onlinelibrary.wiley.com/doi/10.1002/nla.2555">link</a>)
+								</li>
+							</ul>
+						</div>
+
+						<div>
+							<img src="./LocalMaxVol.png" alt="LocalMaxVol" class="centeredImage">
+							<center>
+								<figcaption class="figcaps">Different pivoting strategies in GE and QR can be more or less computationally
+									efficient as well as better or worse singular value estimators. The local maximum volume pivoting is
+									a balance between computational efficiency and theoretical guarantees.</figcaption>
+							</center>
+						</div>
+						<div>
+							<img src="./HSVD.png" alt="HSVD" class="centeredImage">
+							<center>
+								<figcaption class="figcaps">The LTI systems in an SSM can exhibit drastically different distributions
+									depending on the initialization and training schemes. We observed that an SSM with high-rank LTI systems
+									tend to perform better than that with low-rank systems.
+								</figcaption>
 							</center>
 						</div>
 					</div>
@@ -236,6 +311,11 @@
 						<div class="item">
 							<strong>Relevant Publications:</strong>
 							<ul>
+								<li style="margin: 10px 0;">
+									<b>Annan Yu</b>, Michael W. Mahoney, N. Benjamin Erichson,
+									<i>There is HOPE to avoid HiPPOs for long-memory state space models</i>,
+									arXiv:2405.13975. (<a href="https://arxiv.org/abs/2405.13975">link</a>)
+								</li>
 								<li style="margin: 10px 0;">
 									<b>Annan Yu</b>, Arnur Nigmetov, Dmitriy Morozov, Michael W. Mahoney, N. Benjamin
 									Erichson,
@@ -337,10 +417,27 @@
 					<hr>
 					<ul>
 						<li style="margin: 10px 0;">
+							<b>Annan Yu</b>, Michael W. Mahoney, N. Benjamin Erichson,
+							<i>There is HOPE to avoid HiPPOs for long-memory state space models</i>,
+							arXiv:2405.13975. (<a href="https://arxiv.org/abs/2405.13975">link</a>)
+						</li>
+						<li style="margin: 10px 0;">
+							Anil Damle, Silke Glas, Alex Townsend, <b>Annan Yu</b>,
+							<i>How to reveal the rank of a matrix?</i>,
+							arXiv:2405.04330. (<a href="https://arxiv.org/abs/2405.04330">link</a>)
+						</li>
+						<li style="margin: 10px 0;">
 							<b>Annan Yu</b>, Arnur Nigmetov, Dmitriy Morozov, Michael W. Mahoney, N. Benjamin Erichson,
 							<i>Robustifying state-space models for long sequences via approximate diagonalization</i>,
 							International Conference on Learning Representations (spotlight), 2024. (<a
 								href="https://openreview.net/forum?id=DjeQ39QoLQ&">link</a>)
+						</li>
+						<li style="margin: 10px 0;">
+							<b>Annan Yu</b>, Alex Townsend,
+							<i>Leveraging the Hankel norm approximation and data-driven algorithms in reduced order
+								modeling</i>,
+								Numerical Linear Algebra with Applications 2024; e2555. (<a
+								href="https://onlinelibrary.wiley.com/doi/10.1002/nla.2555">link</a>)
 						</li>
 						<li style="margin: 10px 0;">
 							<b>Annan Yu</b>, Alex Townsend,
@@ -355,6 +452,11 @@
 								href="https://openreview.net/forum?id=oLIZ2jGTiv">link</a>)
 						</li>
 						<li style="margin: 10px 0;">
+							<b>Annan Yu</b>, Chloe Becquey, Diana Halikias, Matthew E. Mallory, Alex Townsend,
+							<i>Arbitrary-depth universal approximation theorems for operator neural networks</i>,
+							arXiv:2109.11354. (<a href="https://arxiv.org/abs/2109.11354">link</a>)
+						</li>
+						<li style="margin: 10px 0;">
 							Larry Schumaker, <b>Annan Yu</b>,
 							<i>Approximation by polynomial splines on curved triangulations</i>,
 							Computer Aided Geometric Design, vol 92, 2022. (<a
@@ -365,18 +467,6 @@
 							<i>On <i>H</i>-chromatic symmetric functions</i>,
 							The Electronic Journal of Combinatorics, vol 29(1), 2022. (<a
 								href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v29i1p28">link</a>)
-						</li>
-						<li style="margin: 10px 0;">
-							<b>Annan Yu</b>, Alex Townsend,
-							<i>Leveraging the Hankel norm approximation and data-driven algorithms in reduced order
-								modeling</i>,
-							arXiv:2304.03813. (Accepted by Numerical Linear Algebra with Applications.) (<a
-								href="https://arxiv.org/abs/2304.03813">link</a>)
-						</li>
-						<li style="margin: 10px 0;">
-							<b>Annan Yu</b>, Chloe Becquey, Diana Halikias, Matthew E. Mallory, Alex Townsend,
-							<i>Arbitrary-depth universal approximation theorems for operator neural networks</i>,
-							arXiv:2109.11354. (<a href="https://arxiv.org/abs/2109.11354">link</a>)
 						</li>
 					</ul>
 				</div>
@@ -389,14 +479,6 @@
 					<h3>Future talks:</h3>
 					<ul>
 						<li style="margin: 10px 0;">
-							<i>Robustifying state-space models for long sequences via approximate diagonalization</i>,
-							International Conference on Learning Representations, Austria, 2024.
-						</li>
-						<li style="margin: 10px 0;">
-							<i>Rectifying unstable rational representations in sequence models</i>,
-							SIAM Conference on Applied Linear Algebra, Sorbonne University, France, 2024.
-						</li>
-						<li style="margin: 10px 0;">
 							<i>Representations and evolution of linear time-invariant systems in state-space models</i>,
 							26th International Symposium on Mathematical Theory of Networks and Systems, University of
 							Cambridge, UK, 2024.
@@ -404,6 +486,18 @@
 					</ul>
 					<h3>Previous talks:</h3>
 					<ul>
+						<li style="margin: 10px 0;">
+							<i>Rectifying unstable rational representations in sequence models</i>,
+							SIAM Conference on Applied Linear Algebra, Sorbonne University, France, 2024.
+						</li>
+						<li style="margin: 10px 0;">
+							<i>Robustifying state-space models for long sequences via approximate diagonalization</i> (poster),
+							International Conference on Learning Representations, Austria, 2024.
+						</li>
+						<li style="margin: 10px 0;">
+							<i>How to avoid HiPPOs?</i>,
+							SCAN Seminar, Cornell University, USA, 2024.
+						</li>
 						<li style="margin: 10px 0;">
 							<i>Robustifying state-space models via approximate diagonalization</i>,
 							SciDAC AI monthly synchronization, Lawrence Berkeley National Laboratory, USA, 2024.
@@ -429,7 +523,7 @@
 							International Conference on Learning Representations, Kigali, Rwanda, 2023. (online)
 						</li>
 						<li style="margin: 10px 0;">
-							<i>Tuning frequency bias in neural network training</i>,
+							<i>Tuning frequency bias in neural network training</i> (poster),
 							Workshop on Numerics and Acoustics, Imperial College London, UK, 2022.
 						</li>
 						<li style="margin: 10px 0;">
@@ -598,8 +692,8 @@
 
 	// Updated function to show research section and mark the clicked button as active
 	function showResearchSection(sectionId, btnId) {
-		const sections = ['ltiSystems', 'neuralNetwork', 'nonuniformSamplers'];
-		const buttons = ['btnLtiSystems', 'btnNeuralNetwork', 'btnNonuniformSamplers'];
+		const sections = ['ltiSystems', 'lowRank', 'neuralNetwork', 'nonuniformSamplers'];
+		const buttons = ['btnLtiSystems', 'btnLowRank', 'btnNeuralNetwork', 'btnNonuniformSamplers'];
 
 		// Handling sections display
 		sections.forEach(id => {
@@ -620,6 +714,9 @@
 	// Update event listeners to pass both section and button IDs
 	document.getElementById("btnLtiSystems").addEventListener("click", function () {
 		showResearchSection("ltiSystems", "btnLtiSystems");
+	});
+	document.getElementById("btnLowRank").addEventListener("click", function () {
+		showResearchSection("lowRank", "btnLowRank");
 	});
 	document.getElementById("btnNeuralNetwork").addEventListener("click", function () {
 		showResearchSection("neuralNetwork", "btnNeuralNetwork");
